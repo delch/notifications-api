@@ -1,0 +1,59 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #f1f1f1;
+	font: 13px/16px "Trebuchet MS1", "Trebuchet MS", sans-serif;
+}
+
+input[type="text"] {
+	box-shadow: none;
+	border: 1px solid #b7b7b7;
+	padding: 4px;
+	display: block;
+	width: 300px;
+	margin: 10px 0;
+}
+.form {
+	width: 420px;
+	padding: 20px;
+	margin: 20px 0 20px 20px;
+	float: left;
+}
+.status {
+	float: left;
+	width: 400px;
+	padding: 20px;
+	margin: 20px 20px 20px 0;
+	border-left: 1px solid #b7b7b7;
+}
+span {
+	color: #b7b7b7;
+	display: block;
+}
+.permissionState {
+	margin: 4px 0 30px;
+	padding: 0 0 0 10px;
+	color: #5eb9ff;
+	padding: 4px 8px;
+	background: #f6f6f6;
+	display: inline-block;
+}
+.notificationLog {
+	width: 400px;
+	height: 300px;
+	overflow-y: scroll;
+	border: 1px solid #b7b7b7;
+	margin: 4px 0 0;
+	padding: 2px 10px;
+	font-size: 12px;
+	color: #ff7a39;
+	background: #f6f6f6;
+}
+.warning {
+	color: #ff836a;
+	padding: 4px 8px;
+}
+.red {
+	display: inline;
+	color: #64bc8b;
+}

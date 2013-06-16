@@ -5,11 +5,48 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="styles.css"></style>
+
+    <script src="jquery-1.10.1.min.js"></script>
+    <script src="code.js"></script>
 
     <title>Notification-api</title>
   </head>
 
   <body>
       
+      <div class="form">
+        <!-- заголовок -->
+        <input name="theme" placeholder="Заголовок уведомления (обязательный)" type="text" required>
+        <!-- тело сообщения -->
+        <input name="body" placeholder="Тело уведомления" type="text">
+        <!-- тег -->
+        <input name="tag" placeholder="тег уведомления" type="text">
+        <!-- iconUrl -->
+        <input name="icon" placeholder="иконка уведомления" type="text" value="http://habrastorage.org/storage2/cf9/50b/e87/cf950be87f8c34e63c07217a009f1d17.jpg">
+
+        <input type="button" name="send" value="отправить">
+
+        <br><br><br>
+        <span>Проблемы:</span>
+        <div class="warning">
+          Проблем не обнаружено
+        </div>
+      </div>
+
+      <div class="status">
+        <!-- текущее состояние permission -->
+        <span>текущее разрешение:</span>
+        <div class="permissionState">
+          неизвестно
+        </div>
+
+        <!-- лог событий -->
+        <span>лог событий:</span>
+        <div class="notificationLog">
+        </div>
+      </div>
+
+
   </body>
 </html>
