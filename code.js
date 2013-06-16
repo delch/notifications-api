@@ -15,8 +15,8 @@ function getCurrentPermission() {
     }
 };
 
-function addToLog(val, event) {
-    var msg = "<div class='msg'>событие <span class='red'>" + event + "</span> сработало на уведомлении: " + val + "</div>";
+function addToLog(val, event, id) {
+    var msg = "<div class='msg'>событие <span class='red'>" + event + "</span> сработало на уведомлении: " + val + " (id: " + id + ")</div>";
     $(".notificationLog").append(msg);
 };
 
@@ -42,10 +42,10 @@ function sendNoficiation() {
     };
 
     Notify["notification" + i] = (params) ? new Notification(theme, params) : new Notification(theme);
-    Notify["notification" + i].onshow = function() { addToLog(theme,"onshow") };
-    Notify["notification" + i].onclick = function() { addToLog(theme,"onclick") };
-    Notify["notification" + i].onclose = function() { addToLog(theme,"onclose") };
-    Notify["notification" + i].onerror = function() { addToLog(theme,"onerror") };
+    Notify["notification" + i].onshow = function() { addToLog(theme,"onshow", i) };
+    Notify["notification" + i].onclick = function() { addToLog(theme,"onclick", i) };
+    Notify["notification" + i].onclose = function() { addToLog(theme,"onclose", i) };
+    Notify["notification" + i].onerror = function() { addToLog(theme,"onerror", i) };
     i++;
     delete tag, body, icon, params;
 };
